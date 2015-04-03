@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Jankenpo</title>
+	<link href="css/style.css" rel="stylesheet" media="all" />
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+	<a href="index.html" class="linkExit">[X] exit</a>
+	<div class="content">
+		<h1 class="textGame">Jankenpo</h1>
+		<p class="subTitle">Choice between rock, paper and scissors</p>
+		<ul class="option">
+	      <li class="rock"><img src="img/img-rock.png" title="Rock" alt="Rock" onclick="javascript: choice('r')"></li>
+	      <li class="paper"><img src="img/img-paper.png" title="Paper" alt="Paper" onclick="javascript: choice('p')"></li>
+	      <li class="scissors"><img src="img/img-scissors.png" title="Scissors" alt="Scissors" onclick="javascript: choice('s')"></li>
+		</ul>
+	</div>
+	<div class="backAlert" id="back">
+		<!-- div com as mensagens-->
+		<div class="boxResult"  id="tie" style="display:none">
+			<a class="closeBox" href="index.html">[x] exit</a>
+			<img src="img/img-draw.png" alt="Image face so-so">
+			<h2>Draw! <br>Try again</h2>
+			<span class="time" id="timer"></span>
+		</div>
+		<div class="boxResult" id="win" style="display:none">
+			<a class="closeBox" href="index.html">[x] exit</a>
+			<img src="img/img-win.png" alt="Image face happy">
+			<h2>You won!<br> Congratulations!</h2>
+			<a href="game.html" class="playAgain">> Play again</a>
+		</div>
+		<div class="boxResult" id="lose" style="display:none">
+			<a class="closeBox" href="index.html">[x] exit</a>
+			<img src="img/img-lose.png" alt="Image face sad">
+			<h2>You lose, <br>do not discouraged</h2>
+			<a href="game.html" class="playAgain">> Play again</a>
+		</div>				
+	</div>
+</body>
+</html>
