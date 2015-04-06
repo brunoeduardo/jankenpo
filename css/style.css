@@ -10,6 +10,7 @@ body li {
 
 .content {
   width: 100%;
+  min-width: 250px;
   margin: auto;
   text-align: center;
 }
@@ -59,14 +60,11 @@ body li {
   padding: 0;
   margin-top: 5%;
 }
-
 .option li {
   width: 33%;
-  height: 50%;
-  float: left;
   cursor: pointer;
+  float: left;
 }
-
 .option li:hover {
   -webkit-transform: scale(1.051);
   -moz-transform: scale(1.051);
@@ -82,31 +80,36 @@ body li {
   z-index: 10;
   display: none;
   top: 0;
+  bottom: 0;
 }
 
 .boxResult {
   border: 1px solid #09326b;
   background: #fff;
-  width: 400px;
-  height: 100px;
-  margin: 160px auto;
+  width: 95%;
+  max-width: 400px;
+  min-width: 240px;
+  height: 22%;
+  margin: 50% auto;
   position: relative;
-  padding: 25px 20px 45px 0;
 }
 .boxResult img {
   float: left;
-  margin: 0 30px 0 25px;
+  margin: 5% 5% 0 5%;
+  width: 30%;
 }
 .boxResult h2 {
-  line-height: 1.8rem;
+  margin-top: 8%;
+  line-height: 1.3rem;
   font-family: Helvetica, sans-serif;
   font-weight: normal;
+  font-size: 1rem;
 }
 
 .closeBox {
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 1%;
+  top: 3%;
   font: normal 0.7rem/0.7rem Helvetica, sans-serif;
   color: #1a4b90;
 }
@@ -118,10 +121,37 @@ body li {
 
 .time {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
-  font: normal 0.9rem/0.7rem Helvetica, sans-serif;
+  right: 1%;
+  bottom: 3%;
+  font: normal 0.7rem/0.7rem Helvetica, sans-serif;
   color: #1a4b90;
+}
+
+@media screen and (max-width: 345px) {
+  .boxResult {
+    height: 19%;
+  }
+  .boxResult h2 {
+    margin-top: 9%;
+  }
+}
+@media screen and (min-width: 450px) {
+  .boxResult {
+    height: 150px;
+    margin: 150px auto;
+  }
+  .boxResult img {
+    width: 124px;
+  }
+  .boxResult h2 {
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .option img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

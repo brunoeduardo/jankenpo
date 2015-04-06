@@ -18,6 +18,7 @@ body
 
 .content
 	width: 100%
+	min-width: 250px
 	margin: auto
 	text-align: center
 
@@ -44,7 +45,6 @@ body
 .btnPlay:active
 	background: #031632
 
-@media screen and (max-width: 300px) 
 
 
 //second page
@@ -66,18 +66,19 @@ body
 	padding: 0
 	margin-top: 5%
 
-.option li
-	width: 33%
-	height: 50%
-	float: left
-	cursor: pointer
+	li
+		width: 33%
+		cursor: pointer
+		float: left
 
-.option li:hover
-	-webkit-transform: scale(1.051)
-	-moz-transform: scale(1.051)
-	-ms-transform: scale(1.051)
-	transform: scale(1.051)
+	li:hover
+		-webkit-transform: scale(1.051)
+		-moz-transform: scale(1.051)
+		-ms-transform: scale(1.051)
+		transform: scale(1.051)
 
+
+//alert
 .backAlert
 	background: rgba(0, 0, 0, 0.5)
 	width: 100%
@@ -86,27 +87,32 @@ body
 	z-index: 10
 	display: none
 	top: 0
+	bottom: 0
 
 .boxResult
 	border: 1px solid #09326b
 	background: #fff
-	width: 400px
-	height: 100px
-	margin: 160px auto
+	width: 95%
+	max-width: 400px
+	min-width: 240px
+	height: 22%
+	margin: 50% auto
 	position: relative
-	padding: 25px 20px 45px 0
 	img
 		float: left
-		margin: 0 30px 0 25px
+		margin: 5% 5% 0 5%
+		width: 30%
 	h2
-		line-height: 1.8rem
+		margin-top: 8%
+		line-height: 1.3rem
 		font-family: $font
 		font-weight: normal
+		font-size: 1rem
 
 .closeBox
 	position: absolute
-	right: 5px
-	top: 5px
+	right: 1%
+	top: 3%
 	font: normal 0.7rem/0.7rem $font
 	color: $colorBlue
 
@@ -116,7 +122,28 @@ body
 
 .time
 	position: absolute
-	right: 5px
-	bottom: 5px
-	font: normal 0.9rem/0.7rem $font
+	right: 1%
+	bottom: 3%
+	font: normal 0.7rem/0.7rem $font
 	color: $colorBlue
+
+@media screen and (max-width: 345px)
+	.boxResult 
+		height: 19%
+		h2
+			margin-top: 9%
+
+@media screen and (min-width: 450px)
+	.boxResult 
+		height: 150px
+		margin: 150px auto
+		img 
+			width: 124px	
+		h2
+			line-height: 1.8rem
+			font-size: 1.5rem	
+
+@media screen and (max-width: 700px)
+	.option
+		img
+			width: 100%	

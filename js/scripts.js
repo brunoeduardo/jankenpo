@@ -8,16 +8,17 @@ function choice(valor){
   } else {
     computerChoice = "s";
   }
-  compare(valor, computerChoice);
-
+  compare(computerChoice, valor);
 
   function compare(choiceComputer, choicePlayer) {
+    
+    //add background
+    document.getElementById("back").style.display="block";
     
     //Draw
     if(choiceComputer == choicePlayer) {
       document.getElementById("tie").style.display="block";
-      document.getElementById("back").style.display="block";
-      var number = 6;
+      var number = 3;
       (function start(){
         if ((number -1 ) >= 0 ){
           number = number - 1;
@@ -32,37 +33,35 @@ function choice(valor){
       }());
       return false;
     }
+        
+    //vars     
+    var win = function(){document.getElementById("win").style.display="block";};
+    var lose = function(){document.getElementById("lose").style.display="block";}; 
 
-
+    //if computer choise rock
     if (choiceComputer == "r"){
-      if(choicePlayer == "s"){
-        document.getElementById("win").style.display="block";
-        document.getElementById("back").style.display="block";
+      if(choicePlayer == "p"){
+        win();
       }else {
-        document.getElementById("lose").style.display="block";
-        document.getElementById("back").style.display="block";
+        lose();
       }
     }
 
-
+    //if computer choise paper
     if (choiceComputer == "p"){
       if(choicePlayer == "s"){
-        document.getElementById("lose").style.display="block";
-        document.getElementById("back").style.display="block";
+        win();
       }else {
-        document.getElementById("win").style.display="block";
-        document.getElementById("back").style.display="block";
+        lose();
       }
     }
 
-
+    //if computer choise scissors
     if (choiceComputer == "s"){
       if(choicePlayer == "r"){
-        document.getElementById("lose").style.display="block";
-        document.getElementById("back").style.display="block";
+        win();
       }else {
-        document.getElementById("win").style.display="block";
-        document.getElementById("back").style.display="block";
+        lose();
       }
     }
   }
