@@ -10,8 +10,8 @@ module.exports = function( grunt ) {
       },
  
       my_target : {
-        files : {//primeiro o final depois o original
-          'js/main.js' : [ 'js/scripts.js' ]
+        files : {
+          'js/main.js' : [ 'js/jquery-1.11.2.min.js' , 'js/scripts.js']
         }
       }
     }, 
@@ -43,16 +43,16 @@ module.exports = function( grunt ) {
 
 
   });
-   // Plugins do Grunt
+   // Plugins Grunt
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   grunt.loadNpmTasks( 'grunt-contrib-sass' );
   grunt.loadNpmTasks( 'grunt-contrib-jshint' );
   grunt.loadNpmTasks( 'grunt-contrib-watch' );
  
  
-  // Tarefas que serão executadas
+  // Tasks
    grunt.registerTask( 'go', [ 'uglify', 'sass' ] );
-  // Tarefa para Watch
+  // Tasks Watch
    grunt.registerTask( 'w', [ 'watch' ] );
 
 };
