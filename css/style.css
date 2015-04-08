@@ -33,10 +33,6 @@ body li {
 }
 
 .btnPlay:hover {
-  background: #0C479E;
-}
-
-.btnPlay:active {
   background: #031632;
 }
 
@@ -73,7 +69,7 @@ body li {
 }
 
 .backAlert {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -83,6 +79,13 @@ body li {
   bottom: 0;
 }
 
+.computerChoice {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin-top: 90px;
+}
+
 .boxResult {
   border: 1px solid #09326b;
   background: #fff;
@@ -90,7 +93,7 @@ body li {
   max-width: 400px;
   min-width: 240px;
   height: 22%;
-  margin: 50% auto;
+  margin: 5% auto;
   position: relative;
 }
 .boxResult img {
@@ -138,7 +141,7 @@ body li {
 @media screen and (min-width: 450px) {
   .boxResult {
     height: 150px;
-    margin: 150px auto;
+    margin: 20px auto;
   }
   .boxResult img {
     width: 124px;

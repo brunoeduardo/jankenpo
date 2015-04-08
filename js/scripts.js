@@ -1,6 +1,19 @@
-function choice(valor){
-  var computerChoice = Math.random();
+$(document).ready(function() {
+  $(".playAgain").click(function() {
+      reflesh();
+  });
+});
 
+//reload
+function reflesh(){
+  location.reload();
+}
+
+function choice(valor){
+ 
+  //choice calculator
+  var computerChoice = Math.random();
+  
   if (computerChoice < 0.34) {
     computerChoice = "r";
   } else if(computerChoice <= 0.67) {
@@ -8,35 +21,52 @@ function choice(valor){
   } else {
     computerChoice = "s";
   }
+
+  //say choice computer
+  choiceVal(computerChoice);
+  
+  function choiceVal(value){
+    if (value == "r"){
+      $("#choiceVal").html("Rock");
+    }
+    if (value == "p"){
+      $("#choiceVal").html("Paper");
+    }
+    if (value == "s"){
+      $("#choiceVal").html("Scissors");
+    }
+  }
+
+  //see who win
   compare(computerChoice, valor);
 
   function compare(choiceComputer, choicePlayer) {
     
     //add background
-    document.getElementById("back").style.display="block";
+    $("#back").css("display" , "block");
     
     //Draw
     if(choiceComputer == choicePlayer) {
-      document.getElementById("tie").style.display="block";
+      $("#tie").css("display" , "block");
       var number = 3;
       (function start(){
         if ((number -1 ) >= 0 ){
           number = number - 1;
-          document.getElementById('timer').textContent = '0' + number;
+          $('#timer').html('0' + number);
           setTimeout(function (){
             "use strict";
             start();
           }, 1000);
         }else{
-          location.reload();
+          reflesh();
         }
       }());
       return false;
     }
         
-    //vars     
-    var win = function(){document.getElementById("win").style.display="block";};
-    var lose = function(){document.getElementById("lose").style.display="block";}; 
+    //vars for win or lose     
+    var win = function(){$("#win").css("display" , "block");};
+    var lose = function(){$("#lose").css("display" , "block");}; 
 
     //if computer choise rock
     if (choiceComputer == "r"){
