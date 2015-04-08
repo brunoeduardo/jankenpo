@@ -1,5 +1,4 @@
-Jankenpo
-========
+# Jankenpo
 
 A child's play transformed in a simple game to internet
 
